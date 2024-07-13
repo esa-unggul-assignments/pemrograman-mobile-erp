@@ -6,8 +6,7 @@ import '../../Signup/signup_screen.dart';
 import 'package:odoo_rpc/odoo_rpc.dart';
 import "../../../shared_prefs.dart";
 
-final _usernameController =
-    TextEditingController(text: 'robbani.jihad@student.esaunggul.ac.id');
+final _usernameController = TextEditingController();
 final _passwordController = TextEditingController();
 
 class LoginForm extends StatelessWidget {
