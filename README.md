@@ -13,7 +13,7 @@ Membuat aplikasi mobile yang terintegrasi dengan odoo dan postgres db yang di se
      ```
      docker-compose up -d
      ```
-     Note: untuk windows, buka `docker-compose.yml` terlebih dahulu dan hapus baris 17 yang berisi
+     Note: untuk windows, buka `docker-compose.yml` terlebih dahulu dan hapus baris 15 yang berisi
      ```
      platform: linux/x86_64/v8
      ```
