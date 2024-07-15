@@ -26,4 +26,13 @@ Membuat aplikasi mobile yang terintegrasi dengan odoo dan postgres db yang di se
    flutter pub get
    ```
 
-4. Run aplikasi flutter.
+4. Run aplikasi flutter.<br />
+   Note: untuk menjalankan aplikasi dengan chrome, ubah `baseUrl` di file `login_form.dart` line 20 menjadi
+   ```
+   http://localhost:8069
+   ```
+
+   Lalu run aplikasi flutter dengan command
+   ```
+   flutter run -d chrome --web-browser-flag "--disable-web-security"
+   ```
