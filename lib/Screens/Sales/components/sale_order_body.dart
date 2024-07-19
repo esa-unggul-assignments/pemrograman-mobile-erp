@@ -83,7 +83,7 @@ class Body extends StatelessWidget {
         ),
         child: ListTile(
           onTap: () {
-            Get.toNamed('/saleOrderView/${record['id']}');
+            Get.toNamed('/saleOrderView/${record['id'].toString()}');
           },
           leading: CircleAvatar(backgroundImage: NetworkImage(avatarUrl)),
           title: Text(record['name']),

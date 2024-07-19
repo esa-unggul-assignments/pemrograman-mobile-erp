@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'Screens/Home/home.dart';
 import 'Screens/Sales/sale_home.dart';
 import 'Screens/Sales/sale_order.dart';
+import 'Screens/Sales/sale_detail_order.dart';
 
 void main() => runApp(const MyApp());
 
@@ -45,9 +46,11 @@ class MyApp extends StatelessWidget {
             )),
         home: const WelcomeScreen(),
         getPages: [
-          GetPage(name: '/home', page: () => Home()),
-          GetPage(name: '/salesHome', page: () => SalesHome()),
-          GetPage(name: '/saleOrder/:state', page: () => SaleOrder()),
+          GetPage(name: '/home', page: () => const Home()),
+          GetPage(name: '/salesHome', page: () => const SalesHome()),
+          GetPage(name: '/saleOrder/:state', page: () => const SaleOrder()),
+          GetPage(
+              name: '/saleOrderView/:id', page: () => const SaleDetailOrder()),
         ]);
   }
 }
