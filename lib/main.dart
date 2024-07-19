@@ -7,6 +7,8 @@ import 'Screens/Home/home.dart';
 import 'Screens/Sales/sale_home.dart';
 import 'Screens/Sales/sale_order.dart';
 import 'Screens/Sales/sale_detail_order.dart';
+import 'Screens/Customers/sale_customers.dart';
+import 'Screens/Delivery/delivery.dart';
 
 void main() => runApp(const MyApp());
 
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
           GetPage(name: '/saleOrder/:state', page: () => const SaleOrder()),
           GetPage(
               name: '/saleOrderView/:id', page: () => const SaleDetailOrder()),
+          GetPage(name: '/partner/customer', page: () => const SaleCustomers()),
+          GetPage(name: '/picking/delivery', page: () => const Delivery()),
         ]);
   }
 }
