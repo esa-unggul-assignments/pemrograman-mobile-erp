@@ -4,13 +4,13 @@ import 'package:get/get.dart';
 class GridMenu extends StatelessWidget {
   final List<Map> menus;
 
-  GridMenu({required this.menus});
+  const GridMenu({super.key, required this.menus});
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: EdgeInsets.all(16.0),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      padding: const EdgeInsets.all(16.0),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 16.0,
         mainAxisSpacing: 16.0,
@@ -37,10 +37,10 @@ class GridMenu extends StatelessWidget {
                   size: 48.0,
                   color: menu['iconColor'],
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Text(
                   menu['name'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/constants.dart';
 import 'package:get/get.dart';
 import 'package:odoo_rpc/odoo_rpc.dart';
 import '../../../shared_prefs.dart';
@@ -97,7 +98,7 @@ class Body extends StatelessWidget {
                       color: stateColor),
                   child: Text(
                     record['state'].toUpperCase(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 9,
                       color: Colors.white,
                     ),
@@ -109,7 +110,7 @@ class Body extends StatelessWidget {
           ),
           subtitle: Text(
             record['partner_id'][1],
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ));
   }
@@ -123,14 +124,11 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            title ?? '',
-            style: TextStyle(
-                fontSize: 25, fontWeight: FontWeight.w100, color: Colors.white),
-          ),
-          Text(
             "$subtitle".toUpperCase(),
-            style: TextStyle(
-                fontSize: 25, fontWeight: FontWeight.w900, color: Colors.white),
+            style: const TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w900,
+                color: kPrimaryColor),
           ),
           const SearchBar(),
           FutureBuilder(
@@ -148,10 +146,10 @@ class Body extends StatelessWidget {
                           }),
                     );
                   } else {
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   }
                 } else {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
               })
         ],

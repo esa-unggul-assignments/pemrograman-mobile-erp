@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
-        children: <Widget>[Header(), Body()],
+        children: <Widget>[Body()],
       ),
     );
   }

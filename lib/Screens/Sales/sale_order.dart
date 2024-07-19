@@ -21,7 +21,7 @@ class SaleOrder extends StatelessWidget {
         textTheme:
             Theme.of(context).textTheme.apply(displayColor: kPrimaryColor),
       ),
-      home: SaleOrderScreen(),
+      home: const SaleOrderScreen(),
     );
   }
 }

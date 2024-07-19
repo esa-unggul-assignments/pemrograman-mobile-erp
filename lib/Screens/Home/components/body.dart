@@ -4,7 +4,7 @@ import '../../../controller.dart';
 import '../../../components/menu.dart';
 
 class Body extends StatelessWidget {
-  Body({
+  const Body({
     Key? key,
   }) : super(key: key);
   @override
@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               "Good Morning",
               style: TextStyle(
                   fontSize: 25,
@@ -51,7 +51,7 @@ class Body extends StatelessWidget {
             ),
             Obx(() => Text(
                   "${c.currentUser.value['name']}",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w900,
                       color: Colors.black),

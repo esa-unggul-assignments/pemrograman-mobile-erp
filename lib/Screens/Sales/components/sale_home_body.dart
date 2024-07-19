@@ -4,9 +4,7 @@ import '../../../components/menu.dart';
 class Body extends StatelessWidget {
   const Body({
     Key? key,
-    required this.title,
   }) : super(key: key);
-  final String? title;
   @override
   Widget build(BuildContext context) {
     final List<Map> menus = [
@@ -47,13 +45,6 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              title ?? '',
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white),
-            ),
             const SearchBar(),
             Expanded(
               child: GridMenu(menus: menus),

@@ -18,7 +18,7 @@ class SalesHome extends StatelessWidget {
         textTheme:
             Theme.of(context).textTheme.apply(displayColor: kPrimaryColor),
       ),
-      home: SalesHomeScreen(),
+      home: const SalesHomeScreen(),
     );
   }
 }

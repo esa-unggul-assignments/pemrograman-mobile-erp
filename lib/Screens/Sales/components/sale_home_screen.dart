@@ -6,10 +6,25 @@ class SalesHomeScreen extends StatelessWidget {
   const SalesHomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size * 0.5;
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
-        children: <Widget>[Header(), Body(title: "Sales Menu")],
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Header(
+              title: "Sales Menu",
+            ),
+          ),
+          Positioned(
+            top: 60,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Body(),
+          ),
+        ],
       ),
     );
   }
