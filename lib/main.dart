@@ -9,6 +9,9 @@ import 'Screens/Sales/sale_order.dart';
 import 'Screens/Sales/sale_detail_order.dart';
 import 'Screens/Customers/sale_customers.dart';
 import 'Screens/Delivery/delivery.dart';
+import 'Screens/Purchase/purchase.dart';
+import 'Screens/Inventory/inventory.dart';
+import 'Screens/Invoice/invoice.dart';
 
 void main() => runApp(const MyApp());
 
@@ -55,6 +58,9 @@ class MyApp extends StatelessWidget {
               name: '/saleOrderView/:id', page: () => const SaleDetailOrder()),
           GetPage(name: '/partner/customer', page: () => const SaleCustomers()),
           GetPage(name: '/picking/delivery', page: () => const Delivery()),
+          GetPage(name: '/purchaseHome', page: () => const Purchase()),
+          GetPage(name: '/inventoryHome', page: () => const Inventory()),
+          GetPage(name: '/invoice/customer', page: () => const Invoice()),
         ]);
   }
 }

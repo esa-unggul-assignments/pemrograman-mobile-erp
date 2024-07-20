@@ -6,8 +6,7 @@ import '../../Signup/signup_screen.dart';
 import 'package:odoo_rpc/odoo_rpc.dart';
 import "../../../shared_prefs.dart";
 
-final _usernameController =
-    TextEditingController();
+final _usernameController = TextEditingController();
 final _passwordController = TextEditingController();
 
 class LoginForm extends StatelessWidget {
@@ -18,7 +17,8 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _doLogin(context) async {
-      const baseUrl = 'http://10.0.2.2:8069';
+      const baseUrl = 'http://10.0.2.2:8069'; // proxy localhost untuk emulator
+      // const baseUrl = 'http://localhost:8069'; // untuk menggunakan chrome
       const db = 'dberp14';
       final client = OdooClient(baseUrl);
       try {
