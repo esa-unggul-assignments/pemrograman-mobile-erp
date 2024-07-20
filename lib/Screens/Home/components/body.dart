@@ -23,12 +23,12 @@ class Body extends StatelessWidget {
         'icon': Icons.shopping_basket,
         'iconColor': Colors.orange[300]
       },
-      // {
-      //   'name': 'Accounting',
-      //   'route': '/accountingHome',
-      //   'icon': Icons.account_balance,
-      //   'iconColor': Colors.purple[300]
-      // },
+      {
+        'name': 'Accounting',
+        'route': '/accountingHome',
+        'icon': Icons.account_balance,
+        'iconColor': Colors.purple[300]
+      },
       {
         'name': 'Inventory',
         'route': '/inventoryHome',

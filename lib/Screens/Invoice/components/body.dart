@@ -22,7 +22,6 @@ class Body extends StatelessWidget {
         'method': 'search_read',
         'args': [],
         'kwargs': {
-          // 'domain': ["move_type", "=", "out_invoice"],
           'fields': [
             "name",
             "partner_id",
@@ -34,8 +33,6 @@ class Body extends StatelessWidget {
             "payment_reference",
             "ref",
             "invoice_user_id",
-            "l10n_id_tax_number",
-            "l10n_id_csv_created",
             "team_id",
             "activity_ids",
             "activity_exception_decoration",
@@ -95,11 +92,11 @@ class Body extends StatelessWidget {
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Customer: ${record['partner_id'][1]}'),
-            Text('Invoice Date: ${record['invoice_date'] ?? "N/A"}'),
-            Text('Due Date: ${record['invoice_date_due'] ?? "N/A"}'),
-            Text(
-                'Total: ${record['currency_id'][1]} ${record['amount_total_signed'].toString()}'),
+            // Text('Customer: ${record['partner_id'][1]}'),
+            // Text('Invoice Date: ${record['invoice_date'] ?? "N/A"}'),
+            // Text('Due Date: ${record['invoice_date_due'] ?? "N/A"}'),
+            // Text(
+            //     'Total: ${record['currency_id'][1]} ${record['amount_total_signed'].toString()}'),
           ],
         ),
         trailing: Container(
