@@ -12,6 +12,7 @@ import 'Screens/Delivery/delivery.dart';
 import 'Screens/Purchase/purchase.dart';
 import 'Screens/Inventory/inventory.dart';
 import 'Screens/Invoice/invoice.dart';
+import 'Screens/Accounting/accounting.dart';
 
 void main() => runApp(const MyApp());
 
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: '/purchaseHome', page: () => const Purchase()),
           GetPage(name: '/inventoryHome', page: () => const Inventory()),
           GetPage(name: '/invoice/customer', page: () => const Invoice()),
+          GetPage(name: '/accountingHome', page: () => const Accounting()),
         ]);
   }
 }

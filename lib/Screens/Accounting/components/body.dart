@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
   OdooSession? session;
   OdooClient? client;
 
-  getInvoices(context) async {
+  getAccountings(context) async {
     final prefs = SharedPref();
     final sobj = await prefs.readObject('session');
     final baseUrl = await prefs.readString('baseUrl');
@@ -27,9 +27,9 @@ class Body extends StatelessWidget {
             [
               "move_type",
               "in",
-              ["out_invoice", "out_refund", "out_receipt"]
+              ["in_invoice", "in_refund", "in_receipt", "entry"]
             ],
-            ["journal_id", "=", 1]
+            ["journal_id", "=", 2]
           ],
           'fields': [
             "name",
@@ -101,7 +101,6 @@ class Body extends StatelessWidget {
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Customer: ${record['partner_id'][1]}'),
             Text('Invoice Date: ${record['invoice_date'] ?? "N/A"}'),
             Text('Due Date: ${record['invoice_date_due'] ?? "N/A"}'),
             Text(
@@ -136,9 +135,10 @@ class Body extends StatelessWidget {
         children: <Widget>[
           const SearchBar(),
           FutureBuilder(
-              future: getInvoices(context),
+              future: getAccountings(context),
               builder: (context, AsyncSnapshot<dynamic> orderSnapshot) {
                 if (orderSnapshot.hasData) {
+                  print(orderSnapshot.data);
                   if (orderSnapshot.data != null) {
                     return Expanded(
                       child: ListView.builder(
