@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
         'iconColor': Colors.orange[300]
       },
       {
-        'name': 'Accounting',
+        'name': 'Bill',
         'route': '/accountingHome',
         'icon': Icons.account_balance,
         'iconColor': Colors.purple[300]

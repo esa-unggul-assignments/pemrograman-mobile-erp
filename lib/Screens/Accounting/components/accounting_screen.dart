@@ -16,7 +16,7 @@ class AccountingScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Header(
-              title: "Accounting",
+              title: "Bill",
             ),
           ),
           Positioned(
